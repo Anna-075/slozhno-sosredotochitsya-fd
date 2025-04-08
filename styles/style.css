@@ -15,6 +15,7 @@
   display: grid;
   align-items: center;
   min-height: 668px;
+  height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   padding: 10px;
@@ -190,6 +191,7 @@
   align-items: center;
   justify-content: center;
   min-height: 668px;
+  height: 100vh;
   padding: 0 10px;
   background-color: var(--main-background-color);
 }
