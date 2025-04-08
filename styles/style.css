@@ -1,5 +1,490 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  /* max-width: 375px; */
+  width: 100vw;
+  background-image: var(--cover-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-text-size);
+  font-weight: var(--font-weight-text);
 }
+
+.header {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 668px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
+}
+
+.decorative-corners::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  top: 10px;
+  right: 10px;
+}
+
+.decorative-corners::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+.header__decor-element::before {
+  content: 'rec';
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  display: flex;
+  align-items: center;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.header__decor-element::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 3px var(--accent-color);
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  background-color: transparent;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  line-height: 1.3;
+  border: none;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+  justify-self: center;
+}
+
+.accent-title {
+  color: var(--accent-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 80%;
+  letter-spacing: -3px;
+}
+
+.header__text {
+  color: var(--main-color);
+  font-size: var(--main-text-size);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-decore {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+
+.content {
+  display: grid;
+  gap: 50px;
+  padding: 40px 10px;
+  background-color: var(--main-background-color);
+}
+
+.content__section {
+  display: grid;
+  gap: 20px;
+}
+
+.content__title {
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
+  line-height: 1.3;
+}
+
+.content__list {
+  display: grid;
+  gap: 20px;
+}
+
+.content__item {
+  display: grid;
+  gap: 10px;
+}
+
+.content__item-title {
+  font-size: var(--main-text-size);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+.content__item-text {
+  color: var(--main-text-color);
+  line-height: 1.3;
+}
+
+.content__subtitle {
+  color: var(--main-color);
+}
+
+.title-mini {
+  font-weight: var(--font-weight-norm);
+}
+
+.content__text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.content__pictures {
+  display: grid;
+  gap: 10px;
+}
+
+.content__gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.content__image {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 668px;
+  padding: 0 10px;
+  background-color: var(--main-background-color);
+}
+
+.footer__text {
+  text-shadow: 2px 2px 0 var(--accent-color);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, .3);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+ */
+
+
+
+
+
+
+
+/* 
+.content__text-link:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.content__text-link:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+*/
+
+
+
+
+
+
+/* @media (width >= 768px) {
+  .page {
+    max-width: 768px;
+  }
+
+  .header {
+    min-height: 1024px;  
+    padding: 20px;
+  }
+
+  .decorative-corners::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorative-corners::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__decor-element::before {
+    top: 19px;
+    right: 49px;
+  }
+
+  .header__decor-element::after {
+    top: 28px;
+    right: 29px;
+  }
+
+  .header__title {
+    justify-self: start;
+  }
+
+  .header__text {
+    width: 364px;
+    justify-self: end;
+  }
+
+  .content {
+    gap: 80px;
+    padding: 60px 20px;
+  }
+} */
+
+
+
+
+
+/* @media (width >= 768px) {
+
+  .header__theme-menu-list {
+    margin: 173px 0;
+  }
+
+  .header__title {
+    margin-left: -20px;
+  }
+
+  .accent-title {
+    letter-spacing: 0;
+  }
+
+  .content__head {
+    margin-bottom: 0;
+  }
+
+  .content__why {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--indent-medium);
+  }
+
+  .content__what {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 1fr;
+    gap: var(--indent-medium);
+  }
+
+  .list-what {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .content__how {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, min-content);
+    gap: var(--indent-medium);
+  }
+
+  .head-how {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .list-how {
+    grid-column: 2;
+  }
+
+  .content__title {
+    margin-bottom: var(--indent-small);
+  }
+
+  .title-advice {
+    margin-bottom: 0;
+    display: inline;
+  }
+
+  .content__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 192px 230px 318px;
+    gap: var(--indent-medium);
+    margin-top: var(--indent-medium);
+  }
+
+  .content__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-sunset {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .image-ice-cream {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .image-tape {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .image-books {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .image-street {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+
+  .footer {
+    padding: 463px 0;
+  }
+} */
+
+/* @media (width >= 1024px) {
+  .header__theme-menu {
+    justify-content: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    margin: 0 0 273px;
+  }
+
+  .accent-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__text {
+    width: 491px;
+    margin: 116px 0;
+  }
+
+  .content__why {
+    grid-template-columns: 315px 1fr;
+  }
+  
+  .list-what {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--indent-medium);
+  }
+
+  .content__how {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .content__gallery {
+    grid-template-rows: 260px 315px 433px;
+  }
+
+  .footer {
+    padding: 319px 0;
+  }
+} */
+/* 
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color: #353430;
+    --main-text-color: #353430;
+    --accent-title-color: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --main-background-color: #FFF1F7;
+    --cover-image: url(../images/cover-image-light.png);
+  }
+  
+  .decorative-corners::before,
+  .decorative-corners::after,
+  .header__theme-menu-button_active {
+    border-color: var(--main-color);
+  }
+
+  .header__decor-element {
+    display: none;
+  }
+
+  .header__theme-menu-button,
+  .content__head {
+    color: var(--main-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(0, 0, 40, .3   );
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--main-color);
+  }
+  
+  .content__text-link:focus-visible {
+    outline: 1px solid rgba(0, 0, 40, .5);
+  }
+
+  @media (width >= 1024px) {
+    .footer__text {
+      text-shadow: 2px 2px 0 #FF0070;
+    }
+  }
+} */
