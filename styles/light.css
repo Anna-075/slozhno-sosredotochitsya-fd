@@ -42,7 +42,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root  {
+  :root {
     --main-color: #353430;
     --main-text-color: #353430;
     --accent-title-color: #FFC2E6;
